@@ -27,7 +27,7 @@ export default function App() {
   const friendInfo = friends.map((friend) => {
     return (
       <div key={friend.name}>
-        <img width="200px" height="200px" src={friend.picture} alt="Random Picture"/>
+        <img width="200px" height="200px" src={friend.picture} alt="Random Picture | "/>
         <span>{friend.name}</span>
       </div>
     )
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
   <div>
-    <label for="picture">Picture: </label>
+    <label htmlFor="picture">Picture: </label>
     <input
     type="text"
     id="picture"
@@ -44,7 +44,7 @@ export default function App() {
       setPicture(evt.target.value)
     }}/>
 
-    <label for="name">Name: </label>
+    <label htmlFor="name">Name: </label>
     <input
     type="text"
     id="name"
